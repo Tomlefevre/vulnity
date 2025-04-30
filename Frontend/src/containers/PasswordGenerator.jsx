@@ -24,7 +24,7 @@ function PasswordGenerator() {
       description:
         "Création d'un mot de passe de 25 caractères avec caractères spéciaux, majuscules et caractères étrangers",
     },
-    { name: "Vérification", description: "Vérification avec nos bases de données" },
+    { name: "Vérification", description: "Vérification contre les wordlists connues (rockyou, etc.)" },
     { name: "Salage", description: "Application d'un salage unique pour garantir l'unicité" },
     { name: "Calcul de force", description: "Calcul du nombre de bits d'entropie (minimum 128 bits)" },
     { name: "Simulation", description: "Simulation du temps nécessaire pour cracker le mot de passe" },

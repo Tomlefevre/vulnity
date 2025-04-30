@@ -8,7 +8,7 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000814;
+  background-color: #0f0f1a;
   color: #ffffff;
 }
 
@@ -18,31 +18,95 @@ code {
 
 /* Variables pour les couleurs */
 :root {
-  --background: 222.2 84% 4.9%;
+  --background: 240 30% 8%;
   --foreground: 210 40% 98%;
+  --primary: 267 75% 40%;
+  --primary-light: 267 75% 70%;
+  --primary-dark: 267 75% 30%;
+}
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+/* Masquer la barre de défilement tout en permettant le défilement */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
-  --primary: 263.4 70% 50.4%;
-  --primary-foreground: 210 40% 98%;
+/* Styles pour les espaces publicitaires */
+.ad-container {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  overflow: hidden;
+  min-height: 90px;
+  background-color: rgba(26, 26, 46, 0.5);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+.ad-container::before {
+  content: "Espace publicitaire";
+  color: #64748b;
+  font-size: 0.875rem;
+}
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+/* Styles pour les liens */
+a {
+  color: #a855f7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+a:hover {
+  color: #c084fc;
+}
 
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+/* Styles pour les boutons */
+button {
+  transition: all 0.2s ease;
+}
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 263.4 70% 50.4%;
+/* Styles pour les inputs */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.5);
+}
+
+/* Motif de grille en arrière-plan */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Styles pour les animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Styles pour le responsive */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
 }
